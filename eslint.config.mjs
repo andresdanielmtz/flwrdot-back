@@ -10,7 +10,19 @@ export default [
     ignores: ["node_modules/**"],
   },
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    files: [
+      "**/*.{js,jsx,ts,tsx}",
+      "src/**/*.js",
+      "src/**/*.ts",
+      "src/**/*.jsx",
+      "src/**/*.tsx",
+    ],
+  },
+  {
+    rules: {
+      "no-unused-vars": "warn",
+      semi: ["error", "always"],
+    },
   },
   {
     languageOptions: {

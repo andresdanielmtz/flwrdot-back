@@ -30,7 +30,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Install ESLint
         run: |
           npm install eslint@8.10.0 --legacy-peer-deps
@@ -41,7 +40,7 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: npx eslint . --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif || cat eslint-results.sarif
+        run: npx eslint src --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
       - name: Upload analysis results to GitHub
         continue-on-error: true
