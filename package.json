@@ -6,20 +6,27 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@typescript-eslint/parser": "^8.23.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@microsoft/eslint-formatter-sarif": "^3.1.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.1",
     "concurrently": "^9.1.2",
+    "eslint": "^8.57.1",
+    "globals": "^15.14.0",
     "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0"
   }
 }
