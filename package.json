@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "author": "",
   "license": "MIT",
