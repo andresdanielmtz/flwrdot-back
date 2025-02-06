@@ -41,7 +41,7 @@ jobs:
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: npx eslint "**/*.{js,jsx,ts,tsx}" --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
+        run: npx eslint . --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif || cat eslint-results.sarif
         continue-on-error: true
       - name: Upload analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v3
@@ -49,4 +49,4 @@ jobs:
           sarif_file: eslint-results.sarif
           wait-for-processing: true
       - name: List files in the current directory
-        run: ls -alh
+        run: ls -lah

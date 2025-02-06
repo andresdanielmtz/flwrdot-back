@@ -136,4 +136,4 @@ dist
 .pnp.*
 
 #eslint
-.sarif
+*.sarif
